@@ -1,58 +1,41 @@
-{% load static  %}
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
     <title>PlanEx</title>
-
     <link href="https://fonts.googleapis.com/css?family=Raleway:400,400i,600,700,700i&amp;subset=latin-ext" rel="stylesheet">
-
-    {% block 'head' %}{% endblock %}
-	<!-- Favicon  -->
-    {% comment %} <link rel="icon" href="images/favicon.png"> {% endcomment %}
+    {% block head %}{% endblock %}
+    <!-- Favicon -->
+    <!-- <link rel="icon" href="images/favicon.png"> -->
 </head>
-
-
 <body data-spy="scroll" data-target=".fixo">
-
-    <nav  class=" navbar navbar-expand-lg navbar-dark navbar-custom fixo">
-
-
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixo">
         <!-- Image Logo -->
-        {% comment %} <a class="navbar-brand logo-image" href="index.html"><img src="{%static 'css/csshome/logo.svg'%}" alt="alternative"></a> {% endcomment %}
-        
+        <!-- <a class="navbar-brand logo-image" href="index.html"><img src="{% static 'css/csshome/logo.svg' %}" alt="alternative"></a> -->
         <!-- Mobile Menu Toggle Button -->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-awesome fas fa-bars"></span>
             <span class="navbar-toggler-awesome fas fa-times"></span>
         </button>
-        <!-- end of mobile menu toggle button -->
-
         <div class="collapse navbar-collapse" id="navbarsExampleDefault">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
                     <a class="nav-link page-scroll" href="{% url 'Home' %}">Home <span class="sr-only">(current)</span></a>
                 </li>
-              
-
-                <!-- Dropdown Menu -->          
-                {% comment %} <li class="nav-item dropdown">
+                <!-- Dropdown Menu -->
+                <!-- <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle page-scroll" href="#about" id="navbarDropdown" role="button" aria-haspopup="true" aria-expanded="false">About</a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="terms-conditions.html"><span class="item-text">Terms Conditions</span></a>
                         <div class="dropdown-items-divide-hr"></div>
                         <a class="dropdown-item" href="privacy-policy.html"><span class="item-text">Privacy Policy</span></a>
                     </div>
-                </li> {% endcomment %}
-                <!-- end of dropdown menu -->
-
-                {% comment %} <li class="nav-item">
-                    <a class="nav-link page-scroll" href="#contact">Contact</a>
-                </li> {% endcomment %}
+                </li> -->
             </ul>
-            {% comment %} <span class="nav-item social-icons">
+            <!-- Social Icons -->
+            <!-- <span class="nav-item social-icons">
                 <span class="fa-stack">
                     <a href="#your-link">
                         <i class="fas fa-circle fa-stack-2x facebook"></i>
@@ -65,82 +48,18 @@
                         <i class="fab fa-twitter fa-stack-1x"></i>
                     </a>
                 </span>
-            </span> {% endcomment %}
+            </span> -->
         </div>
-    </nav> <!-- end of navbar -->
-    <!-- end of navigation -->
-
-
-    {% block 'conteudo'%}
-    {% endblock %}
-
-
+    </nav>
+    <!-- Content -->
+    {% block conteudo %}{% endblock %}
     <!-- Footer -->
     <div class="footer">
         <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="footer-col">
-                        <h4>thrt</h4>
-                        <p>hrthreherth5trhtrhs</p>
-                    </div>
-                </div> <!-- end of col -->
-                <div class="col-md-4">
-                    <div class="footer-col middle">
-                        <h4>Links importantes </h4>
-                        <ul class="list-unstyled li-space-lg">
-                            <li class="media">
-                                <i class="fas fa-square"></i>
-                                <div class="media-body">Our business partners <a class="turquoise" href="#your-link">startupguide.com</a></div>
-                            </li>
-                            <li class="media">
-                                <i class="fas fa-square"></i>
-                                <div class="media-body">Read our <a class="turquoise" href="terms-conditions.html">Terms & Conditions</a>, <a class="turquoise" href="privacy-policy.html">Privacy Policy</a></div>
-                            </li>
-                        </ul>
-                    </div>
-                </div> <!-- end of col -->
-                <div class="col-md-4">
-                    <div class="footer-col last">
-                        <h4>Social Media</h4>
-                        <span class="fa-stack">
-                            <a href="#your-link">
-                                <i class="fas fa-circle fa-stack-2x"></i>
-                                <i class="fab fa-facebook-f fa-stack-1x"></i>
-                            </a>
-                        </span>
-                        <span class="fa-stack">
-                            <a href="#your-link">
-                                <i class="fas fa-circle fa-stack-2x"></i>
-                                <i class="fab fa-twitter fa-stack-1x"></i>
-                            </a>
-                        </span>
-                        <span class="fa-stack">
-                            <a href="#your-link">
-                                <i class="fas fa-circle fa-stack-2x"></i>
-                                <i class="fab fa-google-plus-g fa-stack-1x"></i>
-                            </a>
-                        </span>
-                        <span class="fa-stack">
-                            <a href="#your-link">
-                                <i class="fas fa-circle fa-stack-2x"></i>
-                                <i class="fab fa-instagram fa-stack-1x"></i>
-                            </a>
-                        </span>
-                        <span class="fa-stack">
-                            <a href="#your-link">
-                                <i class="fas fa-circle fa-stack-2x"></i>
-                                <i class="fab fa-linkedin-in fa-stack-1x"></i>
-                            </a>
-                        </span>
-                    </div> 
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-        </div> <!-- end of container -->
-    </div> <!-- end of footer -->  
+            <!-- Footer Content -->
+        </div>
+    </div>
     <!-- end of footer -->
-
-
     <!-- Copyright -->
     <div class="copyright">
         <div class="container">
@@ -150,13 +69,10 @@
                 </div> 
             </div>
         </div> 
-    </div>  
-
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-    
-    {% block 'scripts'%}
-    {% endblock %}
-
+    </div>
+    <!-- end of copyright -->
+    <!-- Scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    {% block scripts %}{% endblock %}
 </body>
 </html>
-
