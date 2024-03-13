@@ -16,9 +16,15 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import include, path
 
+from quickstartproject import settings
+from django.conf.urls.static import static
+
 urlpatterns = [
     path('', include('hello_azure.urls')),
     path('appplanex/', include('AppPlanEx.urls')),
     path('ttt/', include('hello_azure.urls')),
     path('admin/', admin.site.urls),
 ]
+
+if settings.DEBUG:
+    urlpatterns  +=  static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

@@ -2,6 +2,8 @@ from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.views.decorators.csrf import csrf_exempt
 
+
+
 def index(request):
     print('Request for index page received')
     return render(request, 'hello_azure/index.html')
